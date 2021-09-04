@@ -6,9 +6,7 @@ export default class Progress extends React.Component {
     const { children } = this.props;
 
     return (
-      <div className="nurvus progress">
-        { children }
-      </div>
+      <div className="nurvus progress" />
     );
   }
 }

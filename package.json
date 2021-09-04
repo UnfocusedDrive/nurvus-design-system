@@ -1,9 +1,9 @@
 {
   "name": "@nurvus/ui",
-  "version": "0.0.0",
+  "version": "0.0.0-alpha.0",
   "description": "NURVUS Design System",
   "private": true,
-  "mode": "development",
+  "main": "src/index.js",
   "scripts": {
     "watch": "webpack --watch",
     "start": "webpack serve",
