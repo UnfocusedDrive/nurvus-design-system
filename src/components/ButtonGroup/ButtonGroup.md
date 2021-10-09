@@ -1,4 +1,5 @@
 ```jsx
+import { Button, ButtonGroup } from '@nurvus/ui';
 import { Button as UIButton, ButtonGroup as UIButtonGroup, Tooltip } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
@@ -6,10 +7,10 @@ import RemoveRedEyeIcon from '@material-ui/icons/RemoveRedEye';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 
 <div>
-  <div>
+  <ButtonGroup>
     <Button><AddIcon /></Button>
     <Button><FileCopyIcon /></Button>
-  </div>
+  </ButtonGroup>
   <UIButtonGroup>
     <UIButton><AddIcon /></UIButton>
     <UIButton><FileCopyIcon /></UIButton>
@@ -18,5 +19,6 @@ import LockOpenIcon from '@material-ui/icons/LockOpen';
 ```
 
 ```jsx
+import { Button, ButtonGroup } from '@nurvus/ui';
 <Button>I am Button</Button>
 ```

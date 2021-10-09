@@ -1,8 +1,10 @@
-.nurvus.button {
+@import "../../styles/variables.scss";
+
+.#{$cls-prefix}.button {
   color: #2e2442;
   background: #4db391;
   border: none;
   padding: 4px 8px;
-  border-radius: 4px;
+  border-radius: $border-radius;
   height: 30px;
 }
