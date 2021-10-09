@@ -1,10 +1,19 @@
 @import "../../styles/variables.scss";
 
 .#{$cls-prefix}.button {
-  color: #2e2442;
-  background: #4db391;
+  color: $purple-1;
+  background: $green-1;
   border: none;
   padding: 4px 8px;
   border-radius: $border-radius;
   height: 30px;
+  cursor: pointer;
+
+  &:hover {
+    background: $green-2;
+  }
+
+  &:active {
+    background:  $green-3;
+  }
 }
