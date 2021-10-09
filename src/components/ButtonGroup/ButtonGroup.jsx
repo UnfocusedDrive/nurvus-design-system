@@ -10,4 +10,4 @@ export default function ButtonGroup(props) {
       className={ classNames(`${CONSTANT.CLASS_PREFIX}`, 'button-group', className) }
       { ...restProps } />
   );
-}
+}<div className={ classNames(`${CONSTANT.CLASS_PREFIX}`, 'button-group', className) } { ...restProps } />
