@@ -1,3 +1,3 @@
-export Button from './components/Button';
-export Progress from './components/Progress/Progress';
-export StackLayout from './components/StackLayout/StackLayout';
+export { default as Button } from './components/Button';
+export { default as Progress } from './components/Progress';
+export { default as StackLayout } from './components/StackLayout';
