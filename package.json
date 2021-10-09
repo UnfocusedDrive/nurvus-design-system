@@ -35,13 +35,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PowerGlove/nurvus-design-system.git"
+    "url": "git+https://github.com/UnfocusedDrive/nurvus-design-system.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PowerGlove/nurvus-design-system/issues"
+    "url": "https://github.com/UnfocusedDrive/nurvus-design-system/issues"
   },
-  "homepage": "https://github.com/PowerGlove/nurvus-design-system#readme"
+  "homepage": "https://github.com/UnfocusedDrive/nurvus-design-system#readme"
 }
