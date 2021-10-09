@@ -13,8 +13,12 @@ A React based reusable component library.
 
 ## Contribute
 ### Getting Started
+Run
 1. `npm install` to install
 2. `npm run styleguide` to run Styleguide
-3. `npm run styleguide:build` to build Styleguide to `./styleguide/build/`
+3. Go to `http://localhost:6060/`
+
+Build
+1. `npm run styleguide:build` to build Styleguide to `./styleguide/build/`
 
 http://nurvus.memoryleak.ai/

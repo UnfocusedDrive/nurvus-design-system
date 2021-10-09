@@ -14,6 +14,17 @@
   }
 
   &:active {
-    background:  $green-3;
+    background: $green-3;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+
+    // Disable event styles
+    &:hover,
+    &:active {
+      background: $green-1;
+    }
   }
 }

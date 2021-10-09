@@ -1,24 +1,25 @@
 ```jsx
-import { Button, ButtonGroup } from '@nurvus/ui';
-import { Button as UIButton, ButtonGroup as UIButtonGroup, Tooltip } from '@material-ui/core';
+import { Button, ButtonGroup, Layout } from '@nurvus/ui';
 import AddIcon from '@material-ui/icons/Add';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import RemoveRedEyeIcon from '@material-ui/icons/RemoveRedEye';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 
-<div>
+<Layout>
   <ButtonGroup>
     <Button><AddIcon /></Button>
     <Button><FileCopyIcon /></Button>
+    <Button disabled={ true }><RemoveRedEyeIcon /></Button>
+    <Button><LockOpenIcon /></Button>
   </ButtonGroup>
-  <UIButtonGroup>
-    <UIButton><AddIcon /></UIButton>
-    <UIButton><FileCopyIcon /></UIButton>
-  </UIButtonGroup>
-</div>
-```
 
-```jsx
-import { Button, ButtonGroup } from '@nurvus/ui';
-<Button>I am Button</Button>
+  <ButtonGroup>
+    <Button disabled={ true }><RemoveRedEyeIcon /></Button>
+    <Button><LockOpenIcon /></Button>
+  </ButtonGroup>
+
+  <ButtonGroup>
+    <Button><LockOpenIcon /></Button>
+  </ButtonGroup>
+</Layout>
 ```

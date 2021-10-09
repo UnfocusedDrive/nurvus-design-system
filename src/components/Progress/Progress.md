@@ -1,7 +1,7 @@
 ```jsx
-import StackLayout from '../StackLayout/StackLayout.jsx';
-<StackLayout>
+import Layout from '../Layout/Layout.jsx';
+<Layout>
   <Progress />
   <Progress percent={ 100 } />
-</StackLayout>
+</Layout>
 ```
