@@ -2,6 +2,8 @@
 
 .#{$cls-prefix}.title {
   // color: $white;
+  // CSS reset
+  margin: 0;
 
   @at-root {
     h1#{&} {

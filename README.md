@@ -9,7 +9,9 @@ A React based reusable component library.
 - React ^16.8
 
 ### Getting Started
-1. Install `npm install https://github.com/UnfocusedDrive/nurvus-design-system.git#main`, or add `"@nurvus/ui": "git+https://github.com/UnfocusedDrive/nurvus-design-system.git#main",` to `package.json` dependencies.
+1. NPM INSTALL Install `npm install https://github.com/UnfocusedDrive/nurvus-design-system.git#main`
+
+Manual Install: Or as alternative, add `"@nurvus/ui": "git+https://github.com/UnfocusedDrive/nurvus-design-system.git#main",` to `package.json` dependencies.
 
 ## Contribute
 ### Getting Started

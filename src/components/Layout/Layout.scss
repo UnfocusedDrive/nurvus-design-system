@@ -1,14 +1,38 @@
 @import "../../styles/variables.scss";
 
 .#{$cls-prefix}.layout {
+
+  //
+  // DISPLAY
+  //
+  &[data-display="block"] {
+    display: block;
+
+    >  * + * {
+      margin-top: $spacing-medium;
+    }
+  }
+
+  &[data-display="flex"] {
+    display: flex;
+
+    >  * + * {
+      margin-left: $spacing-medium;
+    }
+  }
+
+  // CHILDREN / ITEMS
+
+  &[data-align-items="center"] {
+    align-items: center;
+  }
+
+  //
+  // ITEM DISPLAY
+  //
   &[data-item-display="block"] {
     > * {
       display: block;
     }
-  }
-
-
-  >  * + * {
-    margin-top: 20px;
   }
 }
