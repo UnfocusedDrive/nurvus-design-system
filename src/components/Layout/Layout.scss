@@ -1,15 +1,31 @@
 @import "../../styles/variables.scss";
 
 .#{$cls-prefix}.layout {
-
-  //
-  // DISPLAY
-  //
   &[data-display="block"] {
     display: block;
 
-    >  * + * {
-      margin-top: $spacing-medium;
+    &[data-item-spacing="10"] {
+      >  * + * {
+        margin-top: $spacing-10;
+      }
+    }
+
+    &[data-item-spacing="20"] {
+      >  * + * {
+        margin-top: $spacing-medium;
+      }
+    }
+
+    &[data-item-spacing="30"] {
+      >  * + * {
+        margin-top: $spacing-extra-medium;
+      }
+    }
+
+    &[data-item-spacing="40"] {
+      >  * + * {
+        margin-top: $spacing-40;
+      }
     }
   }
 
@@ -21,18 +37,19 @@
     }
   }
 
-  // CHILDREN / ITEMS
-
   &[data-align-items="center"] {
     align-items: center;
   }
 
-  //
-  // ITEM DISPLAY
-  //
+  &[data-justify-content="space-between"] {
+    justify-content: space-between;
+  }
+
   &[data-item-display="block"] {
     > * {
       display: block;
     }
   }
+
+
 }

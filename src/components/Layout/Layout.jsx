@@ -8,7 +8,9 @@ export default function Layout(props) {
     alignItems,
     className,
     display = 'block',
+    justifyContent,
     itemDisplay,
+    itemSpacing = 20,
     ...restProps
   } = props;
 
@@ -18,6 +20,8 @@ export default function Layout(props) {
       data-align-items={ alignItems }
       data-display={ display }
       data-item-display={ itemDisplay }
+      data-item-spacing={ itemSpacing }
+      data-justify-content={ justifyContent }
       { ...restProps }
     />
   );
