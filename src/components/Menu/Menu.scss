@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+
+.#{$cls-prefix}.menu {
+  background: #403960;
+
+  .menu-item {
+    position: relative;
+    padding: 10px;
+    color: white;
+
+    &[data-active="true"] {
+      &::before {
+        content: '';
+        height: 100%;
+        width: 2px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #48c3f4;
+      }
+      // border-left: 2px solid #48c3f4;
+      background: linear-gradient(90deg, rgba(72,195,244, 0.5) 0%, rgba(64,57,96,1) 100%);
+    }
+
+    > [data-type="group"] {
+      margin-left: 20px;
+    }
+  }
+}

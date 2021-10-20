@@ -5,9 +5,9 @@ A React based reusable component library.
 The NURVUS System (/ˈnərvəs ˌsistəm/) is the network of highly complex interconnected CaaS (Component as a service) for your application design.
 
 ### Installation
-1. NPM INSTALL Install `npm install https://github.com/UnfocusedDrive/nurvus-design-system.git#main`
+1. CLI Install `npm install https://github.com/UnfocusedDrive/nurvus-design-system.git#main`
 
-Manual Install: Or as alternative, add `"@nurvus/ui": "git+https://github.com/UnfocusedDrive/nurvus-design-system.git#main",` to `package.json` dependencies.
+2. Or, Manual Install: Or as alternative, add `"@nurvus/ui": "git+https://github.com/UnfocusedDrive/nurvus-design-system.git#main",` to `package.json` dependencies.
 
 ### Dependencies
 - React ^16.8
@@ -32,7 +32,7 @@ function App() {
 ReactDOM.render(<App />, document.querySelector('#root'));
 ```
 
-Not sure? Try out the styleguide here:
+Not sure yet? Try out the styleguide here:
 http://nurvus.memoryleak.ai/
 ## Contribute
 ### Getting Started
