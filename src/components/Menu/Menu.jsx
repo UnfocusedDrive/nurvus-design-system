@@ -21,7 +21,6 @@ export default class Menu extends React.Component {
   }
 
   renderItems(items, activePath=[], path = []) {
-    // const { items } = this.props;
 
     if (items) {
       return items.map((item, i) => {
@@ -30,8 +29,6 @@ export default class Menu extends React.Component {
         const isActive = this.isActiveItem(activePath, i);
         const [ first, ...remainingPath ] = activePath;
         const nextPath = [...path, i];
-        console.log('item', label, isActive, nextPath);
-
         const indent = (20 * path.length) + 10;
 
         return (
