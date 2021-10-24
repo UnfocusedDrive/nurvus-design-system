@@ -21,6 +21,7 @@ export default class Menu extends React.Component {
   }
 
   renderItems(items, activePath=[], path = []) {
+    const { itemRenderer } = this.props;
 
     if (items) {
       return items.map((item, i) => {
@@ -30,6 +31,13 @@ export default class Menu extends React.Component {
         const [ first, ...remainingPath ] = activePath;
         const nextPath = [...path, i];
         const indent = (20 * path.length) + 10;
+
+        let itemChildren;
+        if (itemRenderer) {
+          itemChildren = itemRenderer(item);
+        } else {
+          itemChildren = label;
+        }
 
         return (
           <React.Fragment key={ i }>
@@ -43,7 +51,7 @@ export default class Menu extends React.Component {
                 ...style
               } }
             >
-              { label }
+              { itemChildren }
             </div>
             { this.renderItems(item.items, remainingPath, nextPath) }
 

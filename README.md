@@ -6,12 +6,10 @@ The NURVUS System (/ˈnərvəs ˌsistəm/) is the network of highly complex inte
 
 ### Installation
 1. CLI Install `npm install https://github.com/UnfocusedDrive/nurvus-design-system.git#main`
-
 2. Or, Manual Install: Or as alternative, add `"@nurvus/ui": "git+https://github.com/UnfocusedDrive/nurvus-design-system.git#main",` to `package.json` dependencies.
 
 ### Dependencies
 - React ^16.8
-
 
 ### Usage
 
@@ -34,6 +32,7 @@ ReactDOM.render(<App />, document.querySelector('#root'));
 
 Not sure yet? Try out the styleguide here:
 http://nurvus.memoryleak.ai/
+
 ## Contribute
 ### Getting Started
 Run
