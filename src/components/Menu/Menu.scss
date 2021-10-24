@@ -6,7 +6,14 @@
   .menu-item {
     position: relative;
     padding: 10px;
-    color: white;
+    color: #e6e6e6;
+    cursor: pointer;
+
+    // Hover / Pressed
+    &:hover,
+    &[data-active="true"] {
+      color: white;
+    }
 
     &[data-active="true"] {
       &::before {

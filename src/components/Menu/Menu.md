@@ -46,10 +46,10 @@ import RemoveRedEyeIcon from '@material-ui/icons/RemoveRedEye';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import { Layout, Menu, Text } from '@nurvus/ui';
 
-const itemRenderer = props => {
+const itemRenderer = ({ label }) => {
   return (
     <Layout display="flex" alignItems="center" justifyContent="space-between">
-      <Text>sdasdsada</Text>
+      <Text>{ label }</Text>
       <Layout display="flex" alignItems="center" justifyContent="space-between">
         <RemoveRedEyeIcon />
         <LockOpenIcon />
