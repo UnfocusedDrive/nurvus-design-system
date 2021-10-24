@@ -65,7 +65,7 @@ export default class Menu extends React.Component {
 
 
   render() {
-    const { activePath, className, children, items, ...props } = this.props;
+    const { activePath, className, children, itemRenderer, items, ...props } = this.props;
 
     return (
       <div
