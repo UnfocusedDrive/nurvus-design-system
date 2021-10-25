@@ -3,9 +3,10 @@
   "version": "0.0.0-alpha.0",
   "description": "NURVUS Design System",
   "private": true,
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "webpack",
+    "prepare": "npm run build",
     "start": "webpack serve --mode=development --open",
     "start:production": "webpack serve --mode=production --open",
     "start-styleguide": "webpack serve --config styleguide/webpack.config.js",
@@ -13,6 +14,9 @@
     "styleguide:build": "styleguidist build --config styleguide/webpack.config.js",
     "watch": "webpack --watch"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",

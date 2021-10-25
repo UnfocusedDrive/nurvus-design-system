@@ -12,7 +12,6 @@ The NURVUS System (/ˈnərvəs ˌsistəm/) is the network of highly complex inte
 - React ^16.8
 
 ### Usage
-
 Use the following example after installation:
 ```jsx
 import React from 'react';
