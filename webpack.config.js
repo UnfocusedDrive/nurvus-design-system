@@ -7,6 +7,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'index.js',
+    library: 'ui',
+    libraryTarget: 'umd',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
