@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+
+.#{$cls-prefix}.link {
+  color:  #47c3f3;
+  cursor: pointer;
+
+  &:hover {
+    color: #0e9fd8;
+  }
+
+  &:active {
+    color: #0a7199;
+  }
+
+  // &:disabled {
+      // background: $green-1;
+  // }
+}
