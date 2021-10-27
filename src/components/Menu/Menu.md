@@ -1,3 +1,38 @@
+Basic Example
+```jsx
+import { Menu } from '@nurvus/ui';
+
+const initialPath = [1];
+const items = [
+  {
+    label: 'Item 1',
+  },
+  {
+    label: 'Item 2'
+  },
+  {
+    label: 'Item 3'
+  },
+  {
+    label: 'Item 4'
+  }
+];
+
+const MyApp = ({initialPath}) => {
+  const [activePath, setActivePath] = React.useState(initialPath);
+
+  return (
+    <Menu
+      activePath={ activePath }
+      items={ items }
+      onClick={ (e, path) => setActivePath(path) }
+    />
+  );
+}
+<MyApp initialPath={ initialPath } />
+```
+
+Using Sub Menus
 ```jsx
 import { Menu } from '@nurvus/ui';
 
@@ -40,6 +75,7 @@ const MyApp = ({initialPath}) => {
 }
 <MyApp initialPath={ initialPath } />
 ```
+
 Using itemRenderer
 ```jsx
 import RemoveRedEyeIcon from '@material-ui/icons/RemoveRedEye';

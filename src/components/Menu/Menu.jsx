@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames  from 'classnames';
 import CONSTANT from '../../constants.js';
 import './Menu.scss';
@@ -7,7 +8,7 @@ import './Menu.scss';
  * Menu component.
  * @returns {ReactElement} of Menu component.
  */
-export default class Menu extends React.Component {
+class Menu extends React.Component {
 
   handleClick = (e, path) => {
     e.stopPropagation();
@@ -77,3 +78,32 @@ export default class Menu extends React.Component {
     );
   }
 }
+
+Menu.propTypes = {
+  /**
+   * Active menu item path.
+   */
+  activePath: PropTypes.array,
+  /**
+   * Menu item list to render.
+   */
+  items: PropTypes.arrayOf(PropTypes.shape({
+    /**
+     * Menu item label.
+     */
+    label: PropTypes.node
+  })),
+  /**
+   * Custom renderer for menu items.
+   * @param {object} item - of current menu item
+   */
+  itemRenderer: PropTypes.func,
+  /**
+   * Event handler for menu item onClick.
+   * @param {object} event - object
+   * @param {array} activePath - of clicked menu item.
+   */
+  onClick: PropTypes.func
+};
+
+export default Menu;
