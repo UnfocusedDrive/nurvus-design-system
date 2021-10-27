@@ -1,8 +1,18 @@
+var pjson = require('../package.json');
 const path = require('path');
 
 module.exports = {
+  sections: [
+    {
+      name: 'Getting Started',
+      content: '../README.md'
+    },
+    {
+      name: 'Components',
+      components: '../src/components/**/*.jsx',
+    }
+  ],
   // components: 'src/components/**/[A-Z]*.jsx',
-  components: '../src/components/**/*.jsx',
     // module: {
   //   rules: [
   //     {
@@ -15,7 +25,7 @@ module.exports = {
   //   ]
   // }
   title: 'NURVUS UI',
-  version: '0.0.0-alpha.0',
+  version: pjson.version,
   // Where to build Styleguide
   styleguideDir: './build',
   moduleAliases: {

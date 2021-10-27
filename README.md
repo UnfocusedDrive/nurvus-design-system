@@ -13,7 +13,7 @@ The NURVUS System (/ˈnərvəs ˌsistəm/) is the network of highly complex inte
 
 ### Usage
 Use the following example after installation:
-```jsx
+```jsx static
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Button } from '@nurvus/ui';
