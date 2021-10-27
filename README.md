@@ -34,10 +34,11 @@ http://nurvus.memoryleak.ai/
 
 ## Contribute
 ### Getting Started
-Run
+Run/Dev
 1. `npm install` to install
 2. `npm run styleguide` to run Styleguide
 3. Go to `http://localhost:6060/`
 
 Build
-1. `npm run styleguide:build` to build Styleguide to `./styleguide/build/`
+1. `npm run build` to generate components package to `./dist`.
+2. `npm run styleguide:build` to build Styleguide to `./styleguide/build/`.
