@@ -1,5 +1,5 @@
 {
-  "name": "@nurvus/ui",
+  "name": "@unfocused/nurvus-ui",
   "version": "0.0.0-alpha.0",
   "description": "NURVUS Design System",
   "main": "dist/index.js",
