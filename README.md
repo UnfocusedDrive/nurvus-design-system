@@ -32,6 +32,9 @@ ReactDOM.render(<App />, document.querySelector('#root'));
 Not sure yet? Try out the styleguide here:
 http://nurvus.memoryleak.ai/
 
+Latest preview version can be viewed here:
+https://unstable.memoryleak.ai/nurvus-design-system
+
 ## Contribute
 ### Getting Started
 Run/Dev

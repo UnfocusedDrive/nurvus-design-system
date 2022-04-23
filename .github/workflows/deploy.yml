@@ -29,7 +29,15 @@ jobs:
             cd nurvus-design-system # go to app dir
             npm install # get latest packages
             npm run styleguide:build #build styleguide
-            rm -rf /var/www/nurvus.memoryleak.ai/ # remove directory to wipe all contents
-            mkdir /var/www/nurvus.memoryleak.ai # recreate directory
-            sudo mv -i styleguide/build/* /var/www/nurvus.memoryleak.ai/ # move build to serve dir
-            echo 'Successfully deployed to nurvus.memoryleak.ai'
+
+            # Staging
+            rm -rf /var/www/unstable.memoryleak.ai/nurvus-design-system/ # remove directory to wipe all contents
+            mkdir /var/www/unstable.memoryleak.ai/nurvus-design-system # recreate directory
+            sudo mv -i styleguide/build/* /var/www/unstable.memoryleak.ai/nurvus-design-system/ # move build to serve dir
+            echo 'Successfully deployed to unstable.memoryleak.ai/nurvus-design-system'
+
+            # Production
+            # rm -rf /var/www/nurvus.memoryleak.ai/ # remove directory to wipe all contents
+            # mkdir /var/www/nurvus.memoryleak.ai # recreate directory
+            # sudo mv -i styleguide/build/* /var/www/nurvus.memoryleak.ai/ # move build to serve dir
+            # echo 'Successfully deployed to nurvus.memoryleak.ai'
