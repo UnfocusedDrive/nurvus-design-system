@@ -32,9 +32,9 @@ function FullPageModal(props) {
   // Clear animation and sync visibility states
   function clearAnimation() {
     if (animationState) {
-      setAnimationState('');
       if (visible !== isVisible) {
         setIsVisible(visible);
+        setAnimationState('');
       }
     }
   }
