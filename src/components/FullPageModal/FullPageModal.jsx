@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { PropTypes } from 'prop-types';
 import CONSTANT from '../../constants.js';
-import Layout from '../Layout/Layout';
+import Layout from '../Layout/Layout.jsx';
 import Title from '../Title/Title.jsx';
 import './FullPageModal.scss';
 
