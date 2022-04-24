@@ -1,5 +1,5 @@
 ```jsx
-import { Link } from '@nurvus/ui';
+import { Link } from '@unfocused/nurvus-ui';
 
 <Link>Link on Me</Link>
 ```

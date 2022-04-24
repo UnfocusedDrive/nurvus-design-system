@@ -29,6 +29,6 @@ module.exports = {
   // Where to build Styleguide
   styleguideDir: './build',
   moduleAliases: {
-    '@nurvus/ui': path.resolve(__dirname, '../src/index.js')
+    '@unfocused/nurvus-ui': path.resolve(__dirname, '../src/index.js')
   }
 };

@@ -7,7 +7,7 @@ Using Text Overflow
 ```jsx
 import RemoveRedEyeIcon from '@material-ui/icons/RemoveRedEye';
 import AddIcon from '@material-ui/icons/Add';
-import { Button, Layout, Menu, Text } from '@nurvus/ui';
+import { Button, Layout, Menu, Text } from '@unfocused/nurvus-ui';
 
 const overflowStyle = {
   textOverflow: 'ellipsis',

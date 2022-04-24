@@ -1,0 +1,102 @@
+@import "../../styles/variables.scss";
+
+@keyframes reveal-in {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes reveal-out {
+  from {
+    top: 0%;
+  }
+
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.#{$cls-prefix}.portal {
+
+  &[data-visible="false"] {
+    .mask {
+      opacity: 0;
+    }
+  }
+
+  .mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $modal-z-index;
+    background-color: rgb(64 57 96 / 50%);
+    transition: all 0.3s ease;
+
+    &[data-animate="reveal-in"] {
+      animation: 0.3s ease fade-in;
+    }
+
+    &[data-animate="reveal-out"] {
+      animation: 0.3s ease fade-out;
+    }
+  }
+
+  .#{$cls-prefix}.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $modal-z-index;
+    background-color: #403960;
+
+    .header {
+      background-color: rgb(46, 36, 66);
+      color: $white;
+      padding: 10px;
+    }
+
+    &[data-animate="reveal-in"] {
+      animation: 0.3s ease reveal-in;
+    }
+
+    &[data-animate="reveal-out"] {
+      animation: 0.3s ease reveal-out;
+    }
+
+    &[data-visible="false"] {
+      display: none;
+    }
+  }
+}
+

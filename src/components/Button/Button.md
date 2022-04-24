@@ -1,6 +1,6 @@
 Basic Example
 ```jsx
-import { Button, Layout } from '@nurvus/ui';
+import { Button, Layout } from '@unfocused/nurvus-ui';
 
 <Layout itemDisplay="block">
   <Button>I am Button</Button>
@@ -10,7 +10,7 @@ import { Button, Layout } from '@nurvus/ui';
 ```
 onClick Example
 ```jsx
-import { Button, Layout } from '@nurvus/ui';
+import { Button, Layout } from '@unfocused/nurvus-ui';
 
 <Layout itemDisplay="block">
   <Button onClick={ () => console.log('You Clicked Me!') }>I am Button</Button>
