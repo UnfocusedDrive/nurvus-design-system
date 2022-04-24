@@ -32,8 +32,10 @@
   &[data-display="flex"] {
     display: flex;
 
-    >  * + * {
-      margin-left: $spacing-medium;
+    &[data-item-spacing="20"] {
+      >  * + * {
+        margin-left: $spacing-medium;
+      }
     }
   }
 
