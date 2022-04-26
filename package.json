@@ -9,7 +9,6 @@
     "prepare": "npm run build",
     "start": "webpack serve --mode=development",
     "start:production": "webpack serve --mode=production",
-    "start-styleguide": "webpack serve --config styleguide/webpack.config.js",
     "styleguide": "styleguidist server --config styleguide/webpack.config.js",
     "styleguide:build": "styleguidist build --config styleguide/webpack.config.js",
     "watch": "webpack --watch"

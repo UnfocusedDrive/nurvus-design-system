@@ -1,7 +1,10 @@
-var pjson = require('../package.json');
+var package = require('../package.json');
 const path = require('path');
 
 module.exports = {
+  webpackConfig: Object.assign({}, require('../webpack.config.js'), {
+    /* Custom config options */
+  }),
   sections: [
     {
       name: 'Getting Started',
@@ -12,23 +15,14 @@ module.exports = {
       components: '../src/components/**/*.jsx',
     }
   ],
-  // components: 'src/components/**/[A-Z]*.jsx',
-    // module: {
-  //   rules: [
-  //     {
-  //       test: /\.(js|jsx)$/,
-  //       exclude: /node_modules/,
-  //       use: {
-  //         loader: "babel-loader"
-  //       }
-  //     }
-  //   ]
-  // }
+  require: [
+    path.join(__dirname, './styles.scss')
+  ],
   title: 'NURVUS UI',
-  version: pjson.version,
+  version: package.version,
   // Where to build Styleguide
   styleguideDir: './build',
   moduleAliases: {
-    '@unfocused/nurvus-ui': path.resolve(__dirname, '../src/index.js')
+    [package.name]: path.resolve(__dirname, '../src/index.js')
   }
 };
