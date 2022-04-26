@@ -97,3 +97,115 @@ const columns = [
   data={ data }
 />
 ```
+
+Custom Column renderer
+```jsx
+import React from 'react';
+import { Table } from '@unfocused/nurvus-ui';
+
+// mock data provided from https://www.mockaroo.com/
+
+const data = [
+  {
+    id: 1,
+    Car: "Lexus",
+    Amount: 3347
+  },
+  {
+    id: 2,
+    Car: "Buick",
+    Amount: 3632
+  },
+  {
+    id: 3,
+    Car: "Dodge",
+    Amount: 1464
+  },
+  {
+    id: 4,
+    Car: "MINI",
+    Amount: -2887
+  },
+  {
+    id: 5,
+    Car: "Pontiac",
+    Amount: 1317
+  },
+  {
+    id: 6,
+    Car: "Maserati",
+    Amount: 2814
+  },
+  {
+    id: 7,
+    Car: "Scion",
+    Amount: -4233
+  },
+  {
+    id: 8,
+    Car: "Infiniti",
+    Amount: 2188
+  },
+  {
+    id: 9,
+    Car: "GMC",
+    Amount: 4898
+  },
+  {
+    id: 10,
+    Car: "Infiniti",
+    Amount: 3023
+  }
+];
+
+const dataWithBalance = data.reduce((acc, obj, i) => {
+  let Balance = 0;
+  if (acc.length) {
+    Balance = acc[acc.length-1].Balance;
+  }
+
+  return [
+    ...acc,
+    {
+      ...obj,
+      Balance: Balance + obj.Amount
+    }
+  ]
+}, []);
+
+const columns = [
+  {
+    dataKey: 'Car'
+  },
+  {
+    dataKey: 'Amount',
+    style: {
+      textAlign: 'right'
+    },
+    render: (val, key, props) => {
+      let color = 'green';
+
+      if (val < 0) {
+        color = 'red';
+      }
+
+      return (
+        <span style={{ color }}>
+         { val }
+        </span>
+      );
+    }
+  },
+  {
+    dataKey: 'Balance',
+    style: {
+      textAlign: 'right'
+    }
+  }
+];
+
+<Table
+  columns={ columns }
+  data={ dataWithBalance }
+/>
+```

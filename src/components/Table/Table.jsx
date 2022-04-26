@@ -9,11 +9,17 @@ class Table extends React.Component {
     const { columns } = this.props;
 
     return columns.map((columnProps, i) => {
-      const { dataKey } = columnProps;
+      const { dataKey, render, ...props } = columnProps;
+      const value = rowProps[columnProps.dataKey];
+
+      let children = value;
+      if (render) {
+        children = render(value, dataKey, rowProps);
+      }
 
       return (
-        <td key={ dataKey || i }>
-          { rowProps[columnProps.dataKey] }
+        <td key={ dataKey || i } { ...props }>
+          { children }
         </td>
       );
     });
@@ -23,10 +29,10 @@ class Table extends React.Component {
     const { columns } = this.props;
 
     return columns.map((columnProps, i) => {
-      const { dataKey, title } = columnProps;
+      const { dataKey, title, ...props } = columnProps;
 
       return (
-        <th key={ dataKey || i }>
+        <th key={ dataKey || i } { ...props }>
           { title || dataKey }
         </th>
       );
