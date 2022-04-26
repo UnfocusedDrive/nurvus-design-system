@@ -27,7 +27,7 @@ class Table extends React.Component {
 
       return (
         <th key={ dataKey || i }>
-          { title }
+          { title || dataKey }
         </th>
       );
     });
