@@ -1,6 +1,7 @@
 Basic Usage
 ```jsx
-
+import React from 'react';
+import { Table } from '@unfocused/nurvus-ui';
 
 // mock data provided from https://www.mockaroo.com/
 const data = [
