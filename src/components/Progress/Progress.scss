@@ -1,4 +1,16 @@
-.progress {
-  background: red;
+@import "../../styles/variables.scss";
+
+.#{$cls-prefix}.progress {
+  background: #36334a;
   height: 10px;
+
+  &,
+  > .bar {
+    border-radius: 6px;
+  }
+
+  > .bar {
+    height: 100%;
+    background-color: #46c4ed;
+  }
 }
