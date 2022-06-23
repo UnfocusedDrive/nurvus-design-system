@@ -2,6 +2,12 @@ var package = require('../package.json');
 const path = require('path');
 
 module.exports = {
+  theme: {
+    fontFamily: {
+      base: '"Inter", sans-serif'
+    }
+  },
+  // Import Loaders, etc from base config
   webpackConfig: Object.assign({}, require('../webpack.config.js'), {
     /* Custom config options */
   }),

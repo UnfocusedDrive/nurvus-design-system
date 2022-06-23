@@ -31,9 +31,28 @@ module.exports = {
           'style-loader',
           // Translates CSS into CommonJS
           'css-loader',
+          // Relative URL paths
+          'resolve-url-loader',
           // Compiles Sass to CSS
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
         ],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
       }
     ]
   }
