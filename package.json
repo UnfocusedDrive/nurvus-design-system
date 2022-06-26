@@ -5,13 +5,11 @@
   "main": "dist/index.js",
   "private": true,
   "scripts": {
-    "build": "rimraf dist && webpack --mode=production --json > stats.json",
+    "build": "rimraf dist && npm run build:tokens && webpack --mode=production --json > stats.json",
+    "build:tokens": "node ./tools/build-tokens.js",
     "prepare": "npm run build",
-    "start": "webpack serve --mode=development",
-    "start:production": "webpack serve --mode=production",
-    "styleguide": "styleguidist server --config styleguide/webpack.config.js",
-    "styleguide:build": "rimraf styleguide/build && styleguidist build --config styleguide/webpack.config.js",
-    "watch": "webpack --watch"
+    "styleguide": "npm run build:tokens && styleguidist server --config styleguide/webpack.config.js",
+    "styleguide:build": "rimraf styleguide/build && npm run build:tokens && styleguidist build --config styleguide/webpack.config.js"
   },
   "files": [
     "dist",
