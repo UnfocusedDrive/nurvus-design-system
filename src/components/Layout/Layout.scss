@@ -3,10 +3,20 @@
 .#{$cls-prefix}.layout {
   &[data-display="block"] {
     display: block;
+  }
 
+  // Vertical Item Stacking
+  &[data-display="block"],
+  &[data-flex-direction="column"] {
     &[data-item-spacing="10"] {
       >  * + * {
         margin-top: $spacing-10;
+      }
+    }
+
+    &[data-item-spacing="13"] {
+      >  * + * {
+        margin-top: 13px;
       }
     }
 
@@ -53,5 +63,7 @@
     }
   }
 
-
+  &[data-flex-direction="column"] {
+    flex-direction: column;
+  }
 }

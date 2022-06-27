@@ -1,20 +1,21 @@
+// Button.jsx SCSS
 @import "../../styles/variables.scss";
+@import "../../styles/tokens.scss";
 
 .#{$cls-prefix}.button {
-  color: $purple-1;
-  background: $green-1;
+  background-color: $--primary--500;
+  color: $--pure--white;
+
   border: none;
-  padding: 4px 8px;
-  border-radius: $border-radius;
-  height: 30px;
   cursor: pointer;
+  transition: all 0.3s ease;
 
   &:hover {
-    background: $green-2;
+    background-color: $--primary--600;
   }
 
   &:active {
-    background: $green-3;
+    background-color: $--primary--700;
   }
 
   &:disabled {
@@ -24,7 +25,53 @@
     // Disable event styles
     &:hover,
     &:active {
-      background: $green-1;
+      background: $--primary--500;
     }
+  }
+
+  // Sizes
+  &[data-size="extra-large"] {
+    height: 56px;
+    border-radius: 12px;
+    padding: 0 16px 0 16px;
+    font-size: $--14--medium;
+    font-weight: 500;
+    line-height: 19.6px;
+  }
+
+  &[data-size="large"] {
+    height: 48px;
+    border-radius: 12px;
+    padding: 0 16px 0 16px;
+    font-size: $--14--medium;
+    font-weight: 500;
+    line-height: 19.6px;
+  }
+
+  &[data-size="medium"] {
+    height: 40px;
+    border-radius: 12px;
+    padding: 0 14px 0 14px;
+    font-size: $--14--medium;
+    font-weight: 500;
+    line-height: 19.6px;
+  }
+
+  &[data-size="small"] {
+    height: 32px;
+    border-radius: 10px;
+    padding: 0 12px 0 12px;
+    font-size: $--14--medium;
+    font-weight: 500;
+    line-height: 19.6px;
+  }
+
+  &[data-size="mini"] {
+    height: 24px;
+    border-radius: 8px;
+    padding: 0 10px 0 10px;
+    font-size: $--12--medium;
+    font-weight: 500;
+    line-height: 16.8x;
   }
 }

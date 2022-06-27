@@ -8,6 +8,7 @@ export default function Layout(props) {
     alignItems,
     className,
     display = 'block',
+    flexDirection,
     justifyContent,
     itemDisplay,
     itemSpacing = 20,
@@ -19,6 +20,7 @@ export default function Layout(props) {
       className={ classNames(`${CONSTANT.CLASS_PREFIX}`, 'layout', className) }
       data-align-items={ alignItems }
       data-display={ display }
+      data-flex-direction={ flexDirection }
       data-item-display={ itemDisplay }
       data-item-spacing={ itemSpacing }
       data-justify-content={ justifyContent }
