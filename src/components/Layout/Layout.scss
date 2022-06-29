@@ -47,6 +47,12 @@
         margin-left: $spacing-medium;
       }
     }
+
+    &[data-item-spacing="40"] {
+      >  * + * {
+        margin-left: 40px;
+      }
+    }
   }
 
   &[data-align-items="center"] {

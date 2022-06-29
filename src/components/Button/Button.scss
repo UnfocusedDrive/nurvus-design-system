@@ -3,29 +3,56 @@
 @import "../../styles/tokens.scss";
 
 .#{$cls-prefix}.button {
-  background-color: $--primary--500;
-  color: $--pure--white;
-
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 
-  &:hover {
-    background-color: $--primary--600;
-  }
+  // Type
+  &[data-type="primary"] {
+    background-color: $--primary--500;
+    color: $--pure--white;
 
-  &:active {
-    background-color: $--primary--700;
-  }
+    &:hover {
+      background-color: $--primary--600;
+    }
 
-  &:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-
-    // Disable event styles
-    &:hover,
     &:active {
-      background: $--primary--500;
+      background-color: $--primary--700;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+
+      // Disable event styles
+      &:hover,
+      &:active {
+        background: $--primary--500;
+      }
+    }
+  }
+
+  &[data-type="secondary"] {
+    background-color: $--base-opacity--8;
+    color: $--base--1000;
+
+    &:hover {
+      background-color: $--base-opacity--24;
+    }
+
+    &:active {
+      background-color: $--base-opacity--40;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+
+      // Disable event styles
+      &:hover,
+      &:active {
+        background: $--base-opacity--8;
+      }
     }
   }
 

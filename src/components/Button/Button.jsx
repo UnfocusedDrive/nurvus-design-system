@@ -13,6 +13,7 @@ function Button(props) {
     className,
     children,
     size = 'medium',
+    type = 'primary',
     ...restProps
   } = props;
 
@@ -20,6 +21,7 @@ function Button(props) {
     <button
       className={ classNames(`${CONSTANT.CLASS_PREFIX}`, 'button', className) }
       data-size={ size }
+      data-type={ type }
       { ...restProps }
     >
       { children }
@@ -45,6 +47,13 @@ Button.propTypes = {
     'medium',
     'small',
     'mini'
+   ],
+  /**
+   * Size of button.
+   */
+   type: PropTypes.oneOf[
+    'primary',
+    'secondary'
    ]
 };
 
