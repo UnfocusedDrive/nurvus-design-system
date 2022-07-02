@@ -1,16 +1,30 @@
+// Styles for Progress.jsx
 @import "../../styles/variables.scss";
+@import "../../styles/tokens.scss";
 
 .#{$cls-prefix}.progress {
-  background: #36334a;
-  height: 10px;
+  background: $--orange-opacity--8;
 
   &,
   > .bar {
-    border-radius: 6px;
+    border-radius: 12px;
   }
 
   > .bar {
     height: 100%;
-    background-color: #46c4ed;
+    background-color: $--primary--500;
+  }
+
+  // size
+  &[data-size="small"] {
+    height: 4px;
+  }
+
+  &[data-size="medium"] {
+    height: 6px;
+  }
+
+  &[data-size="large"] {
+    height: 8px;
   }
 }

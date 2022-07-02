@@ -1,8 +1,21 @@
 ```jsx
 import Layout from '../Layout/Layout.jsx';
-<Layout>
-  <Progress />
-  <Progress percent={ 50 } />
-  <Progress percent={ 100 } />
+
+<Layout itemSpacing={ 40 }>
+  <Layout itemSpacing={ 13 } style={ { maxWidth: 90 } }>
+    <Progress size="small" />
+    <Progress size="small" percent={ 50 } />
+    <Progress size="small" percent={ 100 } />
+  </Layout>
+  <Layout itemSpacing={ 13 } style={ { maxWidth: 105 } }>
+    <Progress size="medium" />
+    <Progress size="medium" percent={ 50 } />
+    <Progress size="medium" percent={ 100 } />
+  </Layout>
+  <Layout itemSpacing={ 13 } style={ { maxWidth: 226 } }>
+    <Progress size="large" />
+    <Progress size="large" percent={ 50 } />
+    <Progress size="large" percent={ 100 } />
+  </Layout>
 </Layout>
 ```

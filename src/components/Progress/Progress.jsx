@@ -8,27 +8,40 @@ import './Progress.scss';
  * Progress component. Use it to track progress!
  * @returns {ReactElement} of Progress component.
  */
-class Progress extends React.Component {
-  render() {
-    const { className, percent = 0 } = this.props;
+function Progress(props) {
+  const {
+    className,
+    percent = 0,
+    size = 'medium'
+} = props;
 
-    return (
-      <div className={ classNames(`${CONSTANT.CLASS_PREFIX}`, 'progress', className) }>
-        <div className="bar" style={{ width: `${percent}%` }} />
-      </div>
-    );
-  }
+  return (
+    <div
+      className={ classNames(`${CONSTANT.CLASS_PREFIX}`, 'progress', className) }
+      data-size={ size }
+    >
+      <div className="bar" style={{ width: `${percent}%` }} />
+    </div>
+  );
 }
 
 Progress.propTypes = {
   /**
    * Custom class name.
    */
-   className: PropTypes.string,
-   /**
-    * Progress percent.
-    */
-    percent: PropTypes.number
-  };
+  className: PropTypes.string,
+  /**
+   * Progress percent.
+   */
+  percent: PropTypes.number,
+  /**
+   * Progress percent.
+   */
+  size: PropTypes.oneOf([
+    'small',
+    'medium',
+    'large'
+  ])
+};
 
 export default  Progress;
