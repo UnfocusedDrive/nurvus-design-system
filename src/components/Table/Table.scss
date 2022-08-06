@@ -1,4 +1,6 @@
+// Table.scss
 @import "../../styles/variables.scss";
+@import "../../styles/tokens.scss";
 
 .#{$cls-prefix}.table {
   width: 100%;
@@ -6,17 +8,56 @@
   color: $white;
   border-spacing: 0;
 
-  th {
-    text-align: left;
-  }
+  thead {
+    tr {
+      background-color: $--base--100;
+      color: $--base--600;
 
-  tr {
-    &[data-even="true"] {
-      background-color: #403960;
+      th {
+        border-top: 1px solid $--base--300;
+        border-bottom: 1px solid $--base--300;
+
+        &:first-child {
+          border-left: 1px solid $--base--300;
+        }
+
+        &:last-child {
+          border-right: 1px solid $--base--300;
+        }
+      }
     }
   }
 
+  tr {
+    background-color: $--pure--white;
+    color: $--base--1200;
+  }
+
   th, td {
+    box-sizing: border-box;
     padding: 10px;
+  }
+
+  th {
+    text-align: left;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 11px;
+    min-height: 34px;
+    height: 34px;
+  }
+
+  td {
+    min-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid $--base--100;
+
+    &:first-child {
+      border-left: 1px solid $--base--300;
+    }
+
+    &:last-child {
+      border-right: 1px solid $--base--300;
+    }
   }
 }
