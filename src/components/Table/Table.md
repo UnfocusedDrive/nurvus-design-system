@@ -183,10 +183,10 @@ const columns = [
       textAlign: 'right'
     },
     render: (val, key, props) => {
-      let color = 'green';
+      let color = 'rgba(4, 170, 53, 1)';
 
       if (val < 0) {
-        color = 'red';
+        color = 'rgba(239, 2, 9, 1)';
       }
 
       return (
