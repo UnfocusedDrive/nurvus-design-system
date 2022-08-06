@@ -12,13 +12,15 @@ function Progress(props) {
   const {
     className,
     percent = 0,
-    size = 'medium'
+    size = 'medium',
+    status = 'active'
 } = props;
 
   return (
     <div
       className={ classNames(`${CONSTANT.CLASS_PREFIX}`, 'progress', className) }
       data-size={ size }
+      data-status={ status }
     >
       <div className="bar" style={{ width: `${percent}%` }} />
     </div>
@@ -41,6 +43,15 @@ Progress.propTypes = {
     'small',
     'medium',
     'large'
+  ]),
+  /**
+   * Progress status.
+   */
+   size: PropTypes.oneOf([
+    'active',
+    'success',
+    'warning',
+    'critical'
   ])
 };
 

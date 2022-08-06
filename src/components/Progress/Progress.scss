@@ -12,10 +12,9 @@
 
   > .bar {
     height: 100%;
-    background-color: $--primary--500;
   }
 
-  // size
+  // Size
   &[data-size="small"] {
     height: 4px;
   }
@@ -26,5 +25,30 @@
 
   &[data-size="large"] {
     height: 8px;
+  }
+
+  // Size
+  &[data-status="active"] {
+    > .bar {
+      background-color: $--primary--500;
+    }
+  }
+
+  &[data-status="success"] {
+    > .bar {
+      background-color: $--green--500;
+    }
+  }
+
+  &[data-status="warning"] {
+    > .bar {
+      background-color: $--yellow--200;
+    }
+  }
+
+  &[data-status="critical"] {
+    > .bar {
+      background-color: $--red--500;
+    }
   }
 }

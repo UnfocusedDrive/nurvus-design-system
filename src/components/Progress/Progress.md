@@ -1,3 +1,4 @@
+Basic Example
 ```jsx
 import Layout from '../Layout/Layout.jsx';
 
@@ -18,4 +19,14 @@ import Layout from '../Layout/Layout.jsx';
     <Progress size="large" percent={ 100 } />
   </Layout>
 </Layout>
+```
+
+Status Example
+```jsx
+import Layout from '../Layout/Layout.jsx';
+  <Layout itemSpacing={ 13 } style={ { maxWidth: 90 } }>
+    <Progress status="critical" percent={ 10 } />
+    <Progress status="warning" percent={ 50 } />
+    <Progress status="success" percent={ 100 } />
+  </Layout>
 ```
