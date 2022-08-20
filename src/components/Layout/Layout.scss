@@ -55,8 +55,18 @@
     }
   }
 
+
+  // Align Items
+  &[data-align-items="flex-start"] {
+    align-items: flex-start;
+  }
+
   &[data-align-items="center"] {
     align-items: center;
+  }
+
+  &[data-align-items="flex-end"] {
+    align-items: flex-end;
   }
 
   &[data-justify-content="space-between"] {
