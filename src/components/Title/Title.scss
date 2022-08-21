@@ -1,9 +1,19 @@
 @import "../../styles/variables.scss";
+@import "../../styles/tokens.scss";
 
 .#{$cls-prefix}.title {
   // color: $white;
   // CSS reset
   margin: 0;
+
+  // TYPE
+  &[data-type="primary"] {
+    color: $--pure--black;
+  }
+
+  &[data-type="secondary"] {
+    color: $--base--600;
+  }
 
   @at-root {
     h1#{&} {
@@ -24,6 +34,7 @@
 
     h5#{&} {
       font-size: 14px;
+      font-weight: 500;
     }
 
     h6#{&} {

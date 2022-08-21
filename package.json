@@ -8,8 +8,8 @@
     "build": "rimraf dist && npm run build:tokens && webpack --mode=production --json > stats.json",
     "build:tokens": "node ./tools/build-tokens.js",
     "prepare": "npm run build",
-    "styleguide": "npm run build:tokens && styleguidist server --config styleguide/webpack.config.js",
-    "styleguide:build": "rimraf styleguide/build && npm run build:tokens && styleguidist build --config styleguide/webpack.config.js"
+    "styleguide": "npm run build:tokens && styleguidist server --config styleguide.config.js",
+    "styleguide:build": "rimraf styleguide/build && npm run build:tokens && styleguidist build --config styleguide.config.js"
   },
   "files": [
     "dist",
@@ -19,6 +19,7 @@
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "classnames": "^2.3.1",
+    "clsx": "^1.2.1",
     "lodash": "^4.17.20",
     "prop-types": "^15.7.2"
   },

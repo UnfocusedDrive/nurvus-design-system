@@ -35,6 +35,7 @@ export default function Title(props) {
       children,
       className,
       level = 1,
+      type = "primary",
       ...restProps
     } = props;
 
@@ -42,6 +43,7 @@ export default function Title(props) {
       getTag(level),
       {
         className: classNames(`${CONSTANT.CLASS_PREFIX}`, 'title', className),
+        ['data-type']: type,
         ...restProps
       },
       children
