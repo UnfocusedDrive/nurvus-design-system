@@ -27,7 +27,7 @@ module.exports = {
   title: 'NURVUS UI',
   version: package.version,
   // Where to build Styleguide
-  styleguideDir: './build',
+  styleguideDir: './styleguide/build',
   styleguideComponents: {
     // Wrapper: path.join(__dirname, 'styleguide/Renderer'),
     PlaygroundRenderer: path.join(__dirname, './styleguide/components/PlaygroundRenderer.jsx'),
